@@ -5,7 +5,7 @@ groups:
     profile_velocity: 131
     profile_acceleration: 25
     torque_enable: true
-
+    
 singles:
   gripper:
     operating_mode: linear_position
@@ -13,3 +13,5 @@ singles:
     profile_velocity: 131
     profile_acceleration: 15
     torque_enable: true
+
+

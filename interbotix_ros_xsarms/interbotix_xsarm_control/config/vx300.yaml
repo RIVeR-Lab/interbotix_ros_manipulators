@@ -11,12 +11,6 @@ joint_state_publisher:
 groups:
   arm: [waist, shoulder, elbow, wrist_angle, wrist_rotate]
 
-grippers:
-  gripper:
-    horn_radius: 0.022
-    arm_length: 0.036
-    left_finger: left_finger
-    right_finger: right_finger
 
 shadows:
   shoulder:

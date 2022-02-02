@@ -28,13 +28,3 @@ wrist_rotate_controller:
   type: effort_controllers/JointPositionController
   joint: wrist_rotate
   pid: {p: 30.0, i: 0.0, d: 0.0}
-
-left_finger_controller:
-  type: effort_controllers/JointPositionController
-  joint: left_finger
-  pid: {p: 50, i: 0.0, d: 5.0}
-
-right_finger_controller:
-  type: effort_controllers/JointPositionController
-  joint: right_finger
-  pid: {p: 50, i: 0.0, d: 5.0}

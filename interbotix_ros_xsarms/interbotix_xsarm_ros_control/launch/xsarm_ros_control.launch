@@ -31,7 +31,7 @@
     respawn="false"
     output="screen"
     ns="$(arg robot_name)"
-    args="spawn arm_controller gripper_controller">
+    args="spawn arm_controller">
   </node>
 
   <node

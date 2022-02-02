@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jaguar/interbotix_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/diff_drive_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/interbotix_ros_core/interbotix_ros_xseries/dynamixel_workbench_toolbox/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/effort_controllers/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/force_torque_sensor_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/forward_command_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/gripper_action_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/imu_sensor_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/**",
+        "/home/jaguar/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_xs_toolbox/interbotix_xs_ros_control/include/**",
+        "/home/jaguar/interbotix_ws/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk/include/**",
+        "/home/jaguar/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/interbotix_xsarm_pid/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/joint_state_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/joint_trajectory_controller/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/position_controllers/include/**",
+        "/home/jaguar/interbotix_ws/src/ros_controllers/velocity_controllers/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="robot_name"                        default=""/>
+  <arg name="robot_name"                        default="vx300"/>
   <arg name="rvizconfig"                        default="$(find interbotix_xsarm_descriptions)/rviz/xsarm_description.rviz" />
 
   <node

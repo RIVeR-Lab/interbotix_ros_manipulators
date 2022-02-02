@@ -43,52 +43,8 @@
     <dampingFactor>0.1</dampingFactor>
   </gazebo>
 
-  <gazebo reference="$(arg robot_name)/gripper_link">
-    <material>Custom/Interbotix</material>
-    <dampingFactor>0.1</dampingFactor>
-  </gazebo>
-
-  <gazebo reference="$(arg robot_name)/gripper_prop_link">
-    <material>Custom/Interbotix</material>
-    <dampingFactor>0.1</dampingFactor>
-  </gazebo>
-
-  <gazebo reference="$(arg robot_name)/gripper_bar_link">
-    <material>Custom/Interbotix</material>
-  </gazebo>
-
-  <gazebo reference="$(arg robot_name)/left_finger_link">
-    <material>Custom/Interbotix</material>
-    <dampingFactor>0.1</dampingFactor>
-  </gazebo>
-
-  <gazebo reference="$(arg robot_name)/right_finger_link">
-    <material>Custom/Interbotix</material>
-    <dampingFactor>0.1</dampingFactor>
-  </gazebo>
-
   <gazebo reference="$(arg robot_name)/ar_tag_link">
     <material>Custom/Interbotix</material>
-  </gazebo>
-
-  <gazebo reference="ee_arm">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
-  </gazebo>
-
-  <gazebo reference="ar_tag">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
-  </gazebo>
-
-  <gazebo reference="gripper_bar">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
-  </gazebo>
-
-  <gazebo reference="ee_bar">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
-  </gazebo>
-
-  <gazebo reference="ee_gripper">
-    <disableFixedJointLumping>true</disableFixedJointLumping>
   </gazebo>
 
 </robot>

@@ -1,5 +1,9 @@
 ![manipulator_banner](images/manipulator_banner.png)
 
+## River-lab Modifications for PARIS
+1. The URDF file is modified according to the actual arm with spray gun.
+2. Deleted unsed uxarm files
+
 ## Overview
 ![manipulator_repo_structure](images/manipulator_repo_structure.png)
 Welcome to the *interbotix_ros_manipulators* repository! This repo contains custom ROS packages to control the various types of arms sold at [Interbotix](https://www.trossenrobotics.com/). These ROS packages build upon the ROS driver nodes found in the [interbotix_ros_core](https://github.com/Interbotix/interbotix_ros_core) repository. Support-level software can be found in the [interbotix_ros_toolboxes](https://github.com/Interbotix/interbotix_ros_toolboxes) repository.

@@ -22,6 +22,7 @@
         <joint name="elbow" />
         <joint name="wrist_angle" />
         <joint name="wrist_rotate"/> 
+        <joint name="gripper"/>
     </group>
     
     <group name="interbotix_gripper">
@@ -53,6 +54,7 @@
         <joint name="wrist_rotate" value="0" />
         
     </group_state>
+    <passive_joint name="gripper" />
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="gripper" parent_link="$(arg robot_name)/spray_gun_link" group="interbotix_gripper" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->

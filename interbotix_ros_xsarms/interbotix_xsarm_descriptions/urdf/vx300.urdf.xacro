@@ -223,14 +223,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/sprayer_module_20220202_01.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/vx300_6_sprayer_module.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="interbotix_black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/sprayer_module_20220202_01.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/vx300_6_sprayer_module.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
   <inertial>
@@ -319,7 +319,7 @@
   <link name="$(arg robot_name)/trigger_lever">
     <visual>
       <geometry>
-        <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/spray_motor_lever_draft_02.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/vx300_7_spray_motor_lever.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="blue"/>

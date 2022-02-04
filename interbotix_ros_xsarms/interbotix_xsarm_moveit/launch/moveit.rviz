@@ -4,8 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /MotionPlanning1
         - /MotionPlanning1/Planning Request1
+        - /TF1
       Splitter Ratio: 0.4172767102718353
     Tree Height: 383
   - Class: rviz/Help
@@ -52,6 +52,8 @@ Visualization Manager:
       MoveIt_Planning_Time: 5
       MoveIt_Use_Cartesian_Path: false
       MoveIt_Use_Constraint_Aware_IK: true
+      MoveIt_Warehouse_Host: 127.0.0.1
+      MoveIt_Warehouse_Port: 33829
       MoveIt_Workspace:
         Center:
           X: 0
@@ -81,16 +83,37 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          vx300/gripper_tip:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           vx300/shoulder_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
           vx300/spray_gun_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/spray_gun_tip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/spray_motor_lever_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_LH_stereocam:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_RH_stereocam:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_thermal_cam:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -164,16 +187,37 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          vx300/gripper_tip:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           vx300/shoulder_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
           vx300/spray_gun_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/spray_gun_tip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/spray_motor_lever_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_LH_stereocam:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_RH_stereocam:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          vx300/sprayer_thermal_cam:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -205,6 +249,61 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        vx300/base_link:
+          Value: true
+        vx300/forearm_link:
+          Value: true
+        vx300/shoulder_link:
+          Value: true
+        vx300/spray_gun_link:
+          Value: true
+        vx300/spray_gun_tip:
+          Value: true
+        vx300/spray_motor_lever_link:
+          Value: true
+        vx300/sprayer_LH_stereocam:
+          Value: true
+        vx300/sprayer_RH_stereocam:
+          Value: true
+        vx300/sprayer_thermal_cam:
+          Value: true
+        vx300/upper_arm_link:
+          Value: true
+        vx300/wrist_link:
+          Value: true
+        world:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          vx300/base_link:
+            vx300/shoulder_link:
+              vx300/upper_arm_link:
+                vx300/forearm_link:
+                  vx300/wrist_link:
+                    vx300/spray_gun_link:
+                      vx300/spray_gun_tip:
+                        {}
+                      vx300/spray_motor_lever_link:
+                        {}
+                      vx300/sprayer_LH_stereocam:
+                        {}
+                      vx300/sprayer_RH_stereocam:
+                        {}
+                      vx300/sprayer_thermal_cam:
+                        {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 0; 176; 240
@@ -221,7 +320,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.5
+      Distance: 2.1073920726776123
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -237,9 +336,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 0.28539857268333435
       Target Frame: world
-      Yaw: 0.785398006439209
+      Yaw: 1.8203970193862915
     Saved: ~
 Window Geometry:
   Displays:

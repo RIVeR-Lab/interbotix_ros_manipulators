@@ -117,9 +117,9 @@
   <joint name="shoulder" type="revolute">
     <parent link="$(arg robot_name)/shoulder_link"/>
     <child link="$(arg robot_name)/upper_arm_link"/>
-    <origin rpy="0 ${radians(-arm_angle_offset)} 0" xyz="0 0 0.0661"/>
+    <origin rpy="0 0 0" xyz="0 0 0.0661"/>
     <axis xyz="0 1 0"/>
-    <limit effort="20" lower="0" upper="${radians(2*arm_angle_offset)}" velocity="${pi}"/>
+    <limit effort="20" lower="${radians(-120)}" upper="${radians(120)}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -157,9 +157,9 @@
   <joint name="elbow" type="revolute">
     <parent link="$(arg robot_name)/upper_arm_link"/>
     <child link="$(arg robot_name)/forearm_link"/>
-    <origin rpy="0 ${radians(arm_angle_offset)} 0" xyz="0.05955 0 0.3"/>
+    <origin rpy="0 0 0" xyz="0.05955 0 0.3"/>
     <axis xyz="0 1 0"/>
-    <limit effort="15" lower="-${pi}" upper="0" velocity="${pi}"/>
+    <limit effort="15" lower="${radians(-101)}" upper="${radians(92)}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -196,8 +196,8 @@
 
   <joint name="wrist_angle" type="revolute">
     <axis xyz="0 1 0"/>
-    <limit effort="5" lower="${radians(-15)}" upper="${radians(200)}" velocity="${pi}"/>
-    <origin rpy="0 ${-pi/2} 0" xyz="0.3 0 0"/>
+    <limit effort="5" lower="${radians(-107)}" upper="${radians(128)}" velocity="${pi}"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0"/>
     <parent link="$(arg robot_name)/forearm_link"/>
     <child link="$(arg robot_name)/wrist_link"/>
     <dynamics friction="0.1"/>
@@ -239,7 +239,7 @@
     <child link="$(arg robot_name)/spray_gun_link"/>
     <origin rpy="${pi} ${-pi/2} 0" xyz="0.069744 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="${pi/6}" upper="${11*pi/6}" velocity="${pi}"/>
+    <limit effort="1" lower="0" upper="${11*pi/6}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -303,13 +303,13 @@
     </visual>
   </link>
 
-  <joint name="sprayer_to_gripper_tip" type="fixed">
+  <joint name="sprayer_to_spray_gun_tip" type="fixed">
     <parent link="$(arg robot_name)/spray_gun_link"/>
-    <child link="$(arg robot_name)/gripper_tip"/>
+    <child link="$(arg robot_name)/spray_gun_tip"/>
     <origin rpy="0 0 0" xyz="0.27475 0 0.074"/>
   </joint>
 
-  <link name="$(arg robot_name)/gripper_tip">
+  <link name="$(arg robot_name)/spray_gun_tip">
     <visual>
       <geometry>
         <sphere radius="0.001"/>

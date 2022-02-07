@@ -10,14 +10,13 @@
 
   <xacro:property name="urdf_loc" value="$(arg external_urdf_loc)"/>
   <xacro:property name="pi_offset" value="0.05"/>
-  <xacro:property name="arm_angle_offset" value="85"/> <!--to clear SLAM cameras-->
 
-  <material name="indigo">
-    <color rgba="0.3 0.0 0.5 1.0"/>
+  <material name="lavender">
+    <color rgba="0.9 0.9 1.0 1.0"/>
   </material>
 
   <material name="blue">
-    <color rgba="0.1 0.1 0.8 1.0"/>
+    <color rgba="0.1 0.2 0.8 1.0"/>
   </material>
   
   <material name="lime">
@@ -59,7 +58,7 @@
       <geometry>
         <mesh filename="package://interbotix_xsarm_descriptions/meshes/vx300_meshes/vx300_1_base_jaguar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="indigo"/>
+      <material name="lavender"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -109,7 +108,7 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.03949979 0 0.08916032"/>
-      <mass value="0.798614" />
+      <mass value="2.5" />
       <inertia ixx="0.02670510" iyy="0.0234775" izz="0.02204308" ixy="-0.00000048" ixz="-0.01037491" iyz="0.00000000" />
     </inertial>
   </link>
@@ -119,7 +118,7 @@
     <child link="$(arg robot_name)/upper_arm_link"/>
     <origin rpy="0 0 0" xyz="0 0 0.0661"/>
     <axis xyz="0 1 0"/>
-    <limit effort="20" lower="${radians(-120)}" upper="${radians(120)}" velocity="${pi}"/>
+    <limit effort="20" lower="${radians(-90)}" upper="${radians(90)}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -159,7 +158,7 @@
     <child link="$(arg robot_name)/forearm_link"/>
     <origin rpy="0 0 0" xyz="0.05955 0 0.3"/>
     <axis xyz="0 1 0"/>
-    <limit effort="15" lower="${radians(-101)}" upper="${radians(92)}" velocity="${pi}"/>
+    <limit effort="15" lower="${radians(-90)}" upper="${radians(90)}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -195,11 +194,11 @@
   </link>
 
   <joint name="wrist_angle" type="revolute">
-    <axis xyz="0 1 0"/>
-    <limit effort="5" lower="${radians(-107)}" upper="${radians(128)}" velocity="${pi}"/>
-    <origin rpy="0 0 0" xyz="0.3 0 0"/>
     <parent link="$(arg robot_name)/forearm_link"/>
     <child link="$(arg robot_name)/wrist_link"/>
+    <origin rpy="0 0 0" xyz="0.3 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="5" lower="${radians(-105)}" upper="${radians(120)}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -237,9 +236,9 @@
   <joint name="wrist_rotate" type="revolute">
     <parent link="$(arg robot_name)/wrist_link"/>
     <child link="$(arg robot_name)/spray_gun_link"/>
-    <origin rpy="${pi} ${-pi/2} 0" xyz="0.069744 0 0"/>
+    <origin rpy="${-pi} ${-pi/2} 0" xyz="0.069744 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="0" upper="${11*pi/6}" velocity="${pi}"/>
+    <limit effort="1" lower="${pi/6}" upper="${11*pi/6}" velocity="${pi}"/>
     <dynamics friction="0.1"/>
   </joint>
 
@@ -274,10 +273,10 @@
     </inertial>
   </link>
 
-  <joint name="gripper" type="revolute"> <!-- name="sprayer_to_trigger_lever" -->
+  <joint name="gripper" type="revolute">
     <parent link="$(arg robot_name)/spray_gun_link"/>
     <child link="$(arg robot_name)/spray_motor_lever_link"/>
-    <origin rpy="${pi} 0 ${pi/2}" xyz="-0.050 0.012 0.015"/>
+    <origin rpy="${-pi} 0 ${pi/2}" xyz="-0.050 0.012 0.015"/>
     <axis xyz="0 0 1"/>
     <limit effort="1000.0" velocity="0.5" lower="${pi/2}" upper="${3*pi/2}"/>
     <dynamics friction="0.1"/>
@@ -310,7 +309,7 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0.00864745 0 0.00149862"/>
       <mass value="0.00241513"/>
-      <inertia ixx="0.00000007" iyy="0.00000026" izz="0.00000033" ixy="0" ixz="0" iyz="0"/>
+      <inertia ixx="0.00000007" iyy="0.00000026" izz="0.00000033" ixy="0.0" ixz="0.0" iyz="0.0"/>
     </inertial>
   </link>
 

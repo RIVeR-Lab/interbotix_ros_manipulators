@@ -27,20 +27,27 @@
     
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="Home" group="interbotix_arm">
-        <joint name="waist" value="${pi}" />
+        <joint name="waist" value="0" />
         <joint name="shoulder" value="0" />
         <joint name="elbow" value="0" />
-        <joint name="wrist_angle" value="0" />
-        <joint name="wrist_rotate" value="${pi}" />
-       
+        <joint name="wrist_angle" value="-${pi/2}" />
+        <joint name="wrist_rotate" value="$0" />
     </group_state>
+    
     <group_state name="Upright" group="interbotix_arm">
-        <joint name="waist" value="${pi}" />
-        <joint name="shoulder" value="${pi/2}" />
-        <joint name="elbow" value="-${pi}" />
+        <joint name="waist" value="0" />
+        <joint name="shoulder" value="0" />
+        <joint name="elbow" value="-${pi/2}" />
         <joint name="wrist_angle" value="0" />
-        <joint name="wrist_rotate" value="${pi}" />
-        
+        <joint name="wrist_rotate" value="0" />
+    </group_state>
+    
+    <group_state name="Sleep" group="interbotix_arm">
+        <joint name="waist" value="0" />
+        <joint name="shoulder" value="-${4*pi/9}" />
+        <joint name="elbow" value="${pi/2}" />
+        <joint name="wrist_angle" value="-${pi/2}" />
+        <joint name="wrist_rotate" value="0" />
     </group_state>
 
     <passive_joint name="sprayer_to_spray_gun_tip" />
@@ -53,6 +60,10 @@
     <disable_collisions link1="$(arg robot_name)/forearm_link" link2="$(arg robot_name)/wrist_link" reason="Adjacent" />
     <disable_collisions link1="$(arg robot_name)/wrist_link" link2="$(arg robot_name)/spray_gun_link" reason="Adjacent" />
     <disable_collisions link1="$(arg robot_name)/spray_gun_link" link2="$(arg robot_name)/spray_motor_lever_link" reason="Adjacent" />
+    <disable_collisions link1="$(arg robot_name)/spray_gun_link" link2="$(arg robot_name)/spray_gun_tip" reason="Adjacent" />
+    <disable_collisions link1="$(arg robot_name)/spray_gun_link" link2="$(arg robot_name)/sprayer_RH_stereocam" reason="Adjacent" />
+    <disable_collisions link1="$(arg robot_name)/spray_gun_link" link2="$(arg robot_name)/sprayer_LH_stereocam" reason="Adjacent" />
+    <disable_collisions link1="$(arg robot_name)/spray_gun_link" link2="$(arg robot_name)/sprayer_thermal_cam" reason="Adjacent" />
 
     <xacro:if value="$(arg show_ar_tag)">
       <disable_collisions link1="$(arg robot_name)/ar_tag_link" link2="$(arg robot_name)/forearm_link" reason="Never" />

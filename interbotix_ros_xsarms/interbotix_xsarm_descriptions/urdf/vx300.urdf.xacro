@@ -282,7 +282,7 @@
     <child link="$(arg robot_name)/spray_motor_lever_link"/>
     <origin rpy="${-pi} 0 ${pi/2}" xyz="-0.050 0.012 0.015"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" velocity="0.5" lower="${pi/2}" upper="${3*pi/2}"/>
+    <limit effort="1000.0" velocity="0.5" lower="${-2*pi/3}" upper="${2*pi/3}"/>
     <dynamics friction="0.1"/>
   </joint>
 
